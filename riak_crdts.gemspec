@@ -8,8 +8,8 @@ Gem::Specification.new do |gem|
   gem.version       = RiakCrdts::VERSION
   gem.authors       = ["Dan Kerrigan", "Drew Kerrigan"]
   gem.email         = ["dankerrigan@basho.com", "dkerrigan@basho.com"]
-  gem.description   = %q{TODO: Write a gem description}
-  gem.summary       = %q{TODO: Write a gem summary}
+  gem.description   = "CRDTs implemented using Riak"
+  gem.summary       = "CRDTs implemented using Riak"
   gem.homepage      = ""
 
   gem.files         = `git ls-files`.split($/)
