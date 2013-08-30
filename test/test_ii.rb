@@ -1,6 +1,6 @@
 require 'test/unit'
 require 'riak'
-require '../lib/riak_crdts'
+require_relative '../lib/riak_crdts'
 
 class RiakTest < Test::Unit::TestCase
 
@@ -19,7 +19,8 @@ class RiakTest < Test::Unit::TestCase
 
   # requires local riak instance
   def test_index
-    client = Riak::Client.new(:protocol => 'pbc')
+    client = Riak::Client.new(:protocol => 'http')
+    Riak.disable_list_keys_warnings = true
 
     bucket_name = 'bob'
     index_name = 'this_old_index'
