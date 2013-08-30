@@ -27,7 +27,7 @@ class GSet
   end
 
   def array_from_json(json)
-    h = JSON.parse json, symbolize_names: true
+    h = JSON.parse(json, {symbolize_names: true, symbolize_keys: true})
     raise ArgumentError.new 'unexpected field in JSON' unless h[:type] == 'GSet'
 
     return h[:a]
